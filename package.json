@@ -4,6 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "author": "John Hayes",
+  "scripts": {
+    "start": "next start",
+    "build": "next build",
+    "dev": "next dev"
+  },
   "devDependencies": {
     "cz-conventional-changelog": "3.3.0"
   },
