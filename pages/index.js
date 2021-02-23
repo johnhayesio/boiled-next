@@ -28,17 +28,17 @@ const Home = ({ launch: { mission, site, timestamp, rocket, details } }) => {
 // Fetch next launch from SpaceX API
 export const getServerSideProps = async () => {
   const nextLaunch = await axios
-    .get('https://api.spacexdata.com/v3/launches/next')
-    .then(res => res.data)
+    .get('https://spacelaunchnow.me/api/3.5.0/launch/upcoming/?search=SpaceX')
+    .then(res => res.data.results[0])
 
   return {
     props: {
       launch: {
-        mission: nextLaunch.mission_name,
-        details: nextLaunch.details,
-        timestamp: nextLaunch.launch_date_local,
-        rocket: nextLaunch.rocket.rocket_name,
-        site: nextLaunch.launch_site.site_name_long,
+        mission: nextLaunch.mission.type,
+        details: nextLaunch.mission.description,
+        timestamp: nextLaunch.net,
+        rocket: nextLaunch.rocket.configuration.name,
+        site: nextLaunch.pad.location.name,
       },
     },
   }
