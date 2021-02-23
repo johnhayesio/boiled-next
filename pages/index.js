@@ -2,12 +2,15 @@
 import axios from 'axios'
 import PropTypes from 'prop-types'
 
+// Import commons
+import { Container } from '../components/common'
+
 const Home = ({ launch: { mission, site, timestamp, rocket, details } }) => {
   const date = new Date(timestamp)
 
   return (
-    <div className="container">
-      <div className="launch-data">
+    <div className="wrapper">
+      <Container>
         <h1>Next SpaceX Launch: {mission}</h1>
         <p>{details}</p>
         <p>
@@ -16,19 +19,15 @@ const Home = ({ launch: { mission, site, timestamp, rocket, details } }) => {
         <p>
           This launch is scheduled for {date.toDateString()} at {date.toTimeString()}
         </p>
-      </div>
+      </Container>
 
       <style jsx>{`
-        .container {
+        .wrapper {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           height: 100vh;
-        }
-
-        .launch-data {
-          max-width: 1100px;
         }
       `}</style>
     </div>
@@ -59,5 +58,4 @@ Home.propTypes = {
   launch: PropTypes.object.isRequired,
 }
 
-// Component Styling
 export default Home
