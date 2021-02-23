@@ -6,16 +6,32 @@ const Home = ({ launch: { mission, site, timestamp, rocket, details } }) => {
   const date = new Date(timestamp)
 
   return (
-    <main>
-      <h1>Next SpaceX Launch: {mission}</h1>
-      <p>{details}</p>
-      <p>
-        {rocket} will take off from {site}
-      </p>
-      <p>
-        This launch is scheduled for {date.toDateString()} at {date.toTimeString()}
-      </p>
-    </main>
+    <div className="container">
+      <div className="launch-data">
+        <h1>Next SpaceX Launch: {mission}</h1>
+        <p>{details}</p>
+        <p>
+          {rocket} will take off from {site}
+        </p>
+        <p>
+          This launch is scheduled for {date.toDateString()} at {date.toTimeString()}
+        </p>
+      </div>
+
+      <style jsx>{`
+        .container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+
+        .launch-data {
+          max-width: 1100px;
+        }
+      `}</style>
+    </div>
   )
 }
 
@@ -43,4 +59,5 @@ Home.propTypes = {
   launch: PropTypes.object.isRequired,
 }
 
+// Component Styling
 export default Home
