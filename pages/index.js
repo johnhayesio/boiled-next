@@ -29,6 +29,15 @@ const Home = ({ launch: { mission, site, timestamp, rocket, details } }) => {
           align-items: center;
           height: 100vh;
         }
+
+        h1 {
+          font-size: 5rem;
+        }
+
+        p {
+          font-size: 2rem;
+          padding: 1rem 0;
+        }
       `}</style>
     </div>
   )
