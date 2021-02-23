@@ -1,37 +1,27 @@
 // Import pacakges
+import styled from '@emotion/styled'
 import axios from 'axios'
 import PropTypes from 'prop-types'
+
+// Import elements
+import { Container } from '../components/common'
 
 const Home = ({ launch: { mission, site, timestamp, rocket, details } }) => {
   const date = new Date(timestamp)
 
   return (
-    <div className="container">
-      <div className="launch-data">
-        <h1>Next SpaceX Launch: {mission}</h1>
-        <p>{details}</p>
-        <p>
+    <StyledWrapper>
+      <Container>
+        <StyledTitle>Mission: {mission}</StyledTitle>
+        <StyledContent>{details}</StyledContent>
+        <StyledContent>
           {rocket} will take off from {site}
-        </p>
-        <p>
+        </StyledContent>
+        <StyledContent>
           This launch is scheduled for {date.toDateString()} at {date.toTimeString()}
-        </p>
-      </div>
-
-      <style jsx>{`
-        .container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-        }
-
-        .launch-data {
-          max-width: 1100px;
-        }
-      `}</style>
-    </div>
+        </StyledContent>
+      </Container>
+    </StyledWrapper>
   )
 }
 
@@ -60,4 +50,21 @@ Home.propTypes = {
 }
 
 // Component Styling
+const StyledWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`
+
+const StyledTitle = styled.h1`
+  font-size: 5rem;
+`
+
+const StyledContent = styled.p`
+  font-size: 2rem;
+  padding: 1rem 0;
+`
+
 export default Home
