@@ -11,7 +11,7 @@ const Home = ({ launch: { mission, site, timestamp, rocket, details } }) => {
   return (
     <div className="wrapper">
       <Container>
-        <h1>Next SpaceX Launch: {mission}</h1>
+        <h1>Mission: {mission}</h1>
         <p>{details}</p>
         <p>
           {rocket} will take off from {site}
