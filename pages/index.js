@@ -1,5 +1,4 @@
 // Import pacakges
-import styled from '@emotion/styled'
 import axios from 'axios'
 import PropTypes from 'prop-types'
 
@@ -10,18 +9,18 @@ const Home = ({ launch: { mission, site, timestamp, rocket, details } }) => {
   const date = new Date(timestamp)
 
   return (
-    <StyledWrapper>
+    <div className="flex flex-col justify-center items-center h-screen">
       <Container>
-        <StyledTitle>Mission: {mission}</StyledTitle>
-        <StyledContent>{details}</StyledContent>
-        <StyledContent>
+        <h1 className="text-7xl py-3">Mission: {mission}</h1>
+        <p className="text-4xl py-3">{details}</p>
+        <p className="text-4xl py-3">
           {rocket} will take off from {site}
-        </StyledContent>
-        <StyledContent>
+        </p>
+        <p className="text-4xl py-3">
           This launch is scheduled for {date.toDateString()} at {date.toTimeString()}
-        </StyledContent>
+        </p>
       </Container>
-    </StyledWrapper>
+    </div>
   )
 }
 
@@ -48,23 +47,5 @@ export const getServerSideProps = async () => {
 Home.propTypes = {
   launch: PropTypes.object.isRequired,
 }
-
-// Component Styling
-const StyledWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-`
-
-const StyledTitle = styled.h1`
-  font-size: 5rem;
-`
-
-const StyledContent = styled.p`
-  font-size: 2rem;
-  padding: 1rem 0;
-`
 
 export default Home
