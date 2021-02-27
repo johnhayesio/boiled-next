@@ -5,14 +5,15 @@ import PropTypes from 'prop-types'
 import Header from 'components/Header'
 
 // Import styles
-import 'styles/globals.css'
-import { GlobalStyles } from 'components/GlobalStyles'
+import { ModernReset } from 'components/GlobalStyles'
+import { GlobalStyles } from 'twin.macro'
 
 const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Header />
       <Component {...pageProps} />
+      <ModernReset />
       <GlobalStyles />
     </>
   )
