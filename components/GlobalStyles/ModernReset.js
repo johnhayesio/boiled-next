@@ -1,7 +1,7 @@
 // Import packages
 import { Global, css } from '@emotion/react'
 
-export const GlobalStyles = () => (
+export const ModernReset = () => (
   <>
     <Global
       styles={css`

@@ -1,2 +1,2 @@
 // Export GlobalStyles
-export * from './GlobalStyles'
+export * from './ModernReset'
