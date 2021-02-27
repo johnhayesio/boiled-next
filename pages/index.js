@@ -1,4 +1,5 @@
 // Import pacakges
+import tw, { css, theme } from 'twin.macro' // eslint-disable-line
 import axios from 'axios'
 import PropTypes from 'prop-types'
 
@@ -9,14 +10,14 @@ const Home = ({ launch: { mission, site, timestamp, rocket, details } }) => {
   const date = new Date(timestamp)
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
+    <div tw="flex flex-col justify-center items-center h-screen">
       <Container>
-        <h1 className="text-7xl py-3">Mission: {mission}</h1>
-        <p className="text-4xl py-3">{details}</p>
-        <p className="text-4xl py-3">
+        <h1 tw="text-7xl py-3">Mission: {mission}</h1>
+        <p tw="text-4xl py-3">{details}</p>
+        <p tw="text-4xl py-3">
           {rocket} will take off from {site}
         </p>
-        <p className="text-4xl py-3">
+        <p tw="text-4xl py-3">
           This launch is scheduled for {date.toDateString()} at {date.toTimeString()}
         </p>
       </Container>

@@ -1,5 +1,5 @@
 // Import packages
-import styled from '@emotion/styled'
+import tw, { styled } from 'twin.macro' // eslint-disable-line
 
 // Component Styles
 export const Container = styled.div`
