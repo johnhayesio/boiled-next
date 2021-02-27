@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <StyledContainer>
-        <h1>Next SpaceX Launch</h1>
+        <h1 className="text-3xl">Next SpaceX Launch</h1>
       </StyledContainer>
     </StyledHeader>
   )
