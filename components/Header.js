@@ -2,10 +2,10 @@
 import styled from '@emotion/styled'
 
 // Import commons
-import { Container } from './common'
+import { Container } from 'common'
 
 // Import consts
-import { medium } from '../consts'
+import { medium } from 'consts'
 
 const Header = () => {
   return (
