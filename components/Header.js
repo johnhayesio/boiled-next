@@ -1,5 +1,5 @@
 // Import consts
-import { medium } from '../consts'
+import { medium } from 'consts'
 
 const Header = () => {
   return (

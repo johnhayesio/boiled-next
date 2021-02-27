@@ -3,7 +3,7 @@ import axios from 'axios'
 import PropTypes from 'prop-types'
 
 // Import commons
-import { Container } from '../components/common'
+import { Container } from 'common'
 
 const Home = ({ launch: { mission, site, timestamp, rocket, details } }) => {
   const date = new Date(timestamp)
