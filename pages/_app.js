@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import Header from 'components/Header'
 
 // Import styles
+import 'styles/globals.css'
 import { GlobalStyles } from 'components/GlobalStyles'
 
 const MyApp = ({ Component, pageProps }) => {
