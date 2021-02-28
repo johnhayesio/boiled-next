@@ -1,13 +1,14 @@
 // Import packages
+import { NextPage } from 'next'
 import styled from '@emotion/styled'
 
 // Import commons
-import { Container } from 'common'
+import { Container } from 'components/common'
 
 // Import consts
 import { medium } from 'consts'
 
-const Header = () => {
+const Header: NextPage = () => {
   return (
     <StyledHeader>
       <StyledContainer>
