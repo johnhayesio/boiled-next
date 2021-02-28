@@ -1,5 +1,6 @@
 // Import packages
-import PropTypes from 'prop-types'
+import { ReactNode } from 'react'
+import { AppProps } from 'next/app'
 
 // Import components
 import Header from 'components/Header'
@@ -8,7 +9,7 @@ import Header from 'components/Header'
 import 'styles/globals.css'
 import { GlobalStyles } from 'components/GlobalStyles'
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps): ReactNode => {
   return (
     <>
       <Header />
@@ -16,12 +17,6 @@ const MyApp = ({ Component, pageProps }) => {
       <GlobalStyles />
     </>
   )
-}
-
-// Declare prop type validation
-MyApp.propTypes = {
-  Component: PropTypes.elementType.isRequired,
-  pageProps: PropTypes.object,
 }
 
 export default MyApp
