@@ -1,5 +1,6 @@
 // Import packages
 import { ReactNode } from 'react'
+import Head from 'next/head'
 import { AppProps } from 'next/app'
 
 // Import components
@@ -12,6 +13,9 @@ import { GlobalStyles } from 'components/GlobalStyles'
 const MyApp = ({ Component, pageProps }: AppProps): ReactNode => {
   return (
     <>
+      <Head>
+        <title>Next SpaceX Launch</title>
+      </Head>
       <Header />
       <Component {...pageProps} />
       <GlobalStyles />
