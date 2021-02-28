@@ -1,30 +1,18 @@
+// Import packages
+import { Box, Container, Text } from '@chakra-ui/react'
+
 // Import consts
 import { medium } from 'consts'
 
 const Header = () => {
   return (
-    <div className="header">
-      <div className="container">
-        <h1>Next SpaceX Launch</h1>
-      </div>
-
-      <style jsx>{`
-        .header {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          background: ${medium};
-        }
-
-        .container {
-          max-width: 120rem;
-          margin: 0 auto;
-          padding: 1.5rem 3rem;
-          overflow: hidden;
-        }
-      `}</style>
-    </div>
+    <Box pos="fixed" top="0" left="0" w="100%" bg={medium}>
+      <Container maxW="container.xl">
+        <Text fontSize="xl" py={2}>
+          Next SpaceX Launch
+        </Text>
+      </Container>
+    </Box>
   )
 }
 

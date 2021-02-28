@@ -1,45 +1,28 @@
 // Import pacakges
+import { Flex, Container, Heading, Text } from '@chakra-ui/react'
 import axios from 'axios'
 import PropTypes from 'prop-types'
-
-// Import commons
-import { Container } from 'common'
 
 const Home = ({ launch: { mission, site, timestamp, rocket, details } }) => {
   const date = new Date(timestamp)
 
   return (
-    <div className="wrapper">
-      <Container>
-        <h1>Mission: {mission}</h1>
-        <p>{details}</p>
-        <p>
+    <Flex direction="column" justify="center" align="center" h="100vh">
+      <Container maxW="container.xl">
+        <Heading as="h1" size="2xl" py={2}>
+          Mission: {mission}
+        </Heading>
+        <Text fontSize="xl" py={2}>
+          {details}
+        </Text>
+        <Text fontSize="xl" py={2}>
           {rocket} will take off from {site}
-        </p>
-        <p>
+        </Text>
+        <Text fontSize="xl" py={2}>
           This launch is scheduled for {date.toDateString()} at {date.toTimeString()}
-        </p>
+        </Text>
       </Container>
-
-      <style jsx>{`
-        .wrapper {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-        }
-
-        h1 {
-          font-size: 5rem;
-        }
-
-        p {
-          font-size: 2rem;
-          padding: 1rem 0;
-        }
-      `}</style>
-    </div>
+    </Flex>
   )
 }
 
