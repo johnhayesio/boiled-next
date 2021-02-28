@@ -1,7 +1,8 @@
 // Import packages
+import { NextPage } from 'next'
 import { Global, css } from '@emotion/react'
 
-export const ModernReset = () => (
+export const ModernReset: NextPage = () => (
   <>
     <Global
       styles={css`
