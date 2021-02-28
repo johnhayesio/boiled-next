@@ -1,4 +1,5 @@
 // Import packages
+import Head from 'next/head'
 import PropTypes from 'prop-types'
 
 // Import components
@@ -11,6 +12,9 @@ import { GlobalStyles } from 'components/GlobalStyles'
 const MyApp = ({ Component, pageProps }) => {
   return (
     <>
+      <Head>
+        <title>Next SpaceX Launch</title>
+      </Head>
       <Header />
       <Component {...pageProps} />
       <GlobalStyles />
