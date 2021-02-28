@@ -3,15 +3,12 @@ import tw, { css, theme } from 'twin.macro' // eslint-disable-line
 import axios from 'axios'
 import PropTypes from 'prop-types'
 
-// Import elements
-import { Container } from 'common'
-
 const Home = ({ launch: { mission, site, timestamp, rocket, details } }) => {
   const date = new Date(timestamp)
 
   return (
     <div tw="flex flex-col justify-center items-center h-screen">
-      <Container>
+      <div css={css(theme`container`)}>
         <h1 tw="text-7xl py-3">Mission: {mission}</h1>
         <p tw="text-4xl py-3">{details}</p>
         <p tw="text-4xl py-3">
@@ -20,7 +17,7 @@ const Home = ({ launch: { mission, site, timestamp, rocket, details } }) => {
         <p tw="text-4xl py-3">
           This launch is scheduled for {date.toDateString()} at {date.toTimeString()}
         </p>
-      </Container>
+      </div>
     </div>
   )
 }
