@@ -22,7 +22,7 @@
     "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|json)\"",
     "format": "yarn prettier",
     "check-format": "yarn prettier --list-different",
-    "validate": "yarn check-types && check-format && yarn lint && yarn build"
+    "validate": "npm-run-all --parallel check-types check-format lint build"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.2.0",
