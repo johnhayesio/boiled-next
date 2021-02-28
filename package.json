@@ -1,18 +1,28 @@
 {
-  "name": "next-starter",
+  "name": "boiled-next",
+  "description": "A collection of Next.js boilerplates for Native Support, Emotion, Emotion+Tailwind, Emotion+Tailwind+Twin.Macro, and Chakra UI.",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "author": "John Hayes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnhayesio/boiled-next.git"
+  },
+  "bugs": {
+    "url": "https://github.com/johnhayesio/boiled-next/issues"
+  },
+  "homepage": "https://github.com/johnhayesio/boiled-next",
   "scripts": {
     "start": "next start",
     "build": "next build",
     "dev": "next dev",
-    "lint": "eslint --ext .js,.jsx .",
-    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|json)\"",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
+    "check-types": "tsc --project tsconfig.json --pretty --noEmit",
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|json)\"",
     "format": "yarn prettier",
     "check-format": "yarn prettier --list-different",
-    "validate": "yarn check-format && yarn lint && yarn build"
+    "validate": "yarn check-types && check-format && yarn lint && yarn build"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",
