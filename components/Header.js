@@ -1,12 +1,15 @@
+// Import elements
+import { Container } from 'components/common'
+
 // Import consts
 import { medium } from 'consts'
 
 const Header = () => {
   return (
     <div className="header">
-      <div className="container">
+      <Container>
         <h1>Next SpaceX Launch</h1>
-      </div>
+      </Container>
 
       <style jsx>{`
         .header {
@@ -15,13 +18,6 @@ const Header = () => {
           left: 0;
           width: 100%;
           background: ${medium};
-        }
-
-        .container {
-          max-width: 120rem;
-          margin: 0 auto;
-          padding: 1.5rem 3rem;
-          overflow: hidden;
         }
       `}</style>
     </div>

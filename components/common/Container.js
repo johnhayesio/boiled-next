@@ -9,7 +9,7 @@ export const Container = ({ children }) => (
       <style jsx>
         {`
           .container {
-            max-width: 120rem;
+            max-width: 128rem;
             margin: 0 auto;
             padding: 3rem;
             overflow: auto;
