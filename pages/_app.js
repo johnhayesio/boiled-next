@@ -1,4 +1,5 @@
 // Import packages
+import Head from 'next/head'
 import { ChakraProvider } from '@chakra-ui/react'
 import PropTypes from 'prop-types'
 
@@ -11,6 +12,9 @@ import Header from 'components/Header'
 const MyApp = ({ Component, pageProps }) => {
   return (
     <>
+      <Head>
+        <title>Next SpaceX Launch</title>
+      </Head>
       <ChakraProvider theme={theme}>
         <Header />
         <Component {...pageProps} />
