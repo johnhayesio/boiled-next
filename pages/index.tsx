@@ -1,5 +1,5 @@
 // Import pacakges
-import { GetServerSideProps, NextPage } from 'next'
+import { GetServerSideProps } from 'next'
 import tw, { css, theme } from 'twin.macro' // eslint-disable-line
 import axios from 'axios'
 
@@ -13,7 +13,7 @@ interface Props {
   }
 }
 
-const Home: NextPage<Props> = ({ launch: { mission, details, timestamp, rocket, site } }) => {
+const Home: React.FC<Props> = ({ launch: { mission, details, timestamp, rocket, site } }) => {
   const date = new Date(timestamp)
 
   return (

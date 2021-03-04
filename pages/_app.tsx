@@ -1,6 +1,6 @@
 // Import packages
-import { ReactNode } from 'react'
-import { AppProps } from 'next/app'
+import { NextComponentType } from 'next'
+import { AppContext, AppInitialProps, AppProps } from 'next/app'
 import Head from 'next/head'
 
 // Import components
@@ -10,7 +10,10 @@ import Header from 'components/Header'
 import { ModernReset } from 'components/GlobalStyles'
 import { GlobalStyles } from 'twin.macro'
 
-const MyApp = ({ Component, pageProps }: AppProps): ReactNode => {
+const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
+  Component,
+  pageProps,
+}) => {
   return (
     <>
       <Head>
@@ -23,5 +26,15 @@ const MyApp = ({ Component, pageProps }: AppProps): ReactNode => {
     </>
   )
 }
+
+// Only uncomment this method if you have blocking data requirements for
+// every single page in your application. This disables the ability to
+// perform automatic static optimization, causing every page in your app to
+// be server-side rendered.
+
+// MyApp.getInitialProps = async (appContext) => {
+//   const appProps = await App.getInitialProps(appContext)
+//   return { ...appProps }
+// }
 
 export default MyApp
