@@ -1,7 +1,4 @@
-// Import packages
-import { NextPage } from 'next'
-
-export const Container: NextPage = ({ children }) => (
+export const Container: React.FC = ({ children }) => (
   <>
     <div className="container">
       {children}

@@ -1,7 +1,4 @@
-// Import packages
-import { NextPage } from 'next'
-
-export const GlobalStyles: NextPage = () => (
+export const GlobalStyles: React.FC = () => (
   <style jsx global>
     {`
       html {

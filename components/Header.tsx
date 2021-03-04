@@ -1,11 +1,10 @@
 // Import elements
-import { NextPage } from 'next'
 import { Container } from 'components/common'
 
 // Import consts
 import { medium } from 'consts'
 
-const Header: NextPage = () => {
+const Header: React.FC = () => {
   return (
     <div className="header">
       <Container>
