@@ -17,11 +17,12 @@
     "start": "next start",
     "build": "next build",
     "dev": "next dev",
-    "lint": "eslint --ext .js,.jsx .",
-    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|json)\"",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
+    "check-types": "tsc --project tsconfig.json --pretty --noEmit",
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|json)\"",
     "format": "yarn prettier",
     "check-format": "yarn prettier --list-different",
-    "validate": "npm-run-all --parallel check-format lint build"
+    "validate": "npm-run-all --parallel check-types check-format lint build"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",
