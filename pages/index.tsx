@@ -1,5 +1,5 @@
 // Import pacakges
-import { GetServerSideProps, NextPage } from 'next'
+import { GetServerSideProps } from 'next'
 import styled from '@emotion/styled'
 import axios from 'axios'
 
@@ -16,7 +16,7 @@ interface Props {
   }
 }
 
-const Home: NextPage<Props> = ({ launch: { mission, site, timestamp, rocket, details } }) => {
+const Home: React.FC<Props> = ({ launch: { mission, site, timestamp, rocket, details } }) => {
   const date = new Date(timestamp)
 
   return (
