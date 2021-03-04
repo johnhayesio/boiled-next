@@ -11,6 +11,7 @@ module.exports = {
     config.resolve.alias['components'] = path.join(__dirname, 'components')
     config.resolve.alias['pages'] = path.join(__dirname, 'pages')
     config.resolve.alias['consts'] = path.join(__dirname, 'consts')
+    config.resolve.alias['theme'] = path.join(__dirname, 'theme')
 
     return config
   },
