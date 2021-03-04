@@ -1,11 +1,10 @@
 // Import packages
-import { NextPage } from 'next'
 import { Box, Container, Text } from '@chakra-ui/react'
 
 // Import consts
 import { medium } from 'consts'
 
-const Header: NextPage = () => {
+const Header: React.FC = () => {
   return (
     <Box pos="fixed" top="0" left="0" w="100%" bg={medium}>
       <Container maxW="container.xl">
