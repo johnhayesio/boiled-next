@@ -19,7 +19,7 @@
     "dev": "next dev",
     "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
     "check-types": "tsc --project tsconfig.json --pretty --noEmit",
-    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|json)\"",
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|json)\"",
     "format": "yarn prettier",
     "check-format": "yarn prettier --list-different",
     "validate": "npm-run-all --parallel check-types check-format lint build"

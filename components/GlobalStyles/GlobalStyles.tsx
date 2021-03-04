@@ -1,7 +1,8 @@
 // Import packages
+import { NextPage } from 'next'
 import { Global, css } from '@emotion/react'
 
-export const GlobalStyles = () => (
+export const GlobalStyles: NextPage = () => (
   <>
     <Global
       styles={css`
