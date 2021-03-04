@@ -1,7 +1,7 @@
 // Import packages
-import PropTypes from 'prop-types'
+import { NextPage } from 'next'
 
-export const Container = ({ children }) => (
+export const Container: NextPage = ({ children }) => (
   <>
     <div className="container">
       {children}
@@ -19,8 +19,3 @@ export const Container = ({ children }) => (
     </div>
   </>
 )
-
-// Declare prop type validation
-Container.propTypes = {
-  children: PropTypes.node.isRequired,
-}

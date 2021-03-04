@@ -1,11 +1,21 @@
 // Import pacakges
+import { GetServerSideProps, NextPage } from 'next'
 import axios from 'axios'
-import PropTypes from 'prop-types'
 
 // Import commons
 import { Container } from 'components/common'
 
-const Home = ({ launch: { mission, site, timestamp, rocket, details } }) => {
+interface Props {
+  launch: {
+    mission: string
+    site: string
+    timestamp: string
+    rocket: string
+    details: string
+  }
+}
+
+const Home: NextPage<Props> = ({ launch: { mission, site, timestamp, rocket, details } }) => {
   const date = new Date(timestamp)
 
   return (
@@ -44,7 +54,7 @@ const Home = ({ launch: { mission, site, timestamp, rocket, details } }) => {
 }
 
 // Fetch next launch from SpaceX API
-export const getServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const nextLaunch = await axios
     .get('https://spacelaunchnow.me/api/3.5.0/launch/upcoming/?search=SpaceX')
     .then(res => res.data.results[0])
@@ -60,11 +70,6 @@ export const getServerSideProps = async () => {
       },
     },
   }
-}
-
-// Declare prop type validation
-Home.propTypes = {
-  launch: PropTypes.object.isRequired,
 }
 
 export default Home

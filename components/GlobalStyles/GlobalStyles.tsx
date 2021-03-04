@@ -1,4 +1,7 @@
-export const GlobalStyles = () => (
+// Import packages
+import { NextPage } from 'next'
+
+export const GlobalStyles: NextPage = () => (
   <style jsx global>
     {`
       html {

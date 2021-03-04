@@ -1,10 +1,11 @@
 // Import elements
+import { NextPage } from 'next'
 import { Container } from 'components/common'
 
 // Import consts
 import { medium } from 'consts'
 
-const Header = () => {
+const Header: NextPage = () => {
   return (
     <div className="header">
       <Container>
