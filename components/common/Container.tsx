@@ -8,7 +8,7 @@ export const Container: React.FC = ({ children }) => (
           .container {
             max-width: 128rem;
             margin: 0 auto;
-            padding: 1.5rem;
+            padding: 1rem;
             overflow: auto;
           }
         `}
