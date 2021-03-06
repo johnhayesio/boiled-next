@@ -11,7 +11,7 @@ export const Container = ({ children }) => (
           .container {
             max-width: 128rem;
             margin: 0 auto;
-            padding: 3rem;
+            padding: 1rem;
             overflow: auto;
           }
         `}
