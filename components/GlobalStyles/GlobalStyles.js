@@ -6,7 +6,6 @@ export const GlobalStyles = () => (
     <Global
       styles={css`
         html {
-          font-size: 62.5%;
           scroll-behavior: smooth;
           box-sizing: border-box;
         }
