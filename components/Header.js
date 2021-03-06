@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <StyledContainer>
-        <h1 className="text-3xl">Next SpaceX Launch</h1>
+        <h1 className="text-xl">Next SpaceX Launch</h1>
       </StyledContainer>
     </StyledHeader>
   )
@@ -27,7 +27,7 @@ const StyledHeader = styled.header`
 `
 
 const StyledContainer = styled(Container)`
-  padding: 1.5rem 3rem;
+  padding: 1rem;
 `
 
 export default Header
