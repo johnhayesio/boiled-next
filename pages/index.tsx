@@ -21,12 +21,12 @@ const Home: React.FC<Props> = ({ launch: { mission, details, timestamp, rocket, 
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <Container>
-        <h1 className="text-7xl py-3">Mission: {mission}</h1>
-        <p className="text-4xl py-3">{details}</p>
-        <p className="text-4xl py-3">
+        <h1 className="text-5xl py-2">Mission: {mission}</h1>
+        <p className="text-2xl py-2">{details}</p>
+        <p className="text-2xl py-2">
           {rocket} will take off from {site}
         </p>
-        <p className="text-4xl py-3">
+        <p className="text-2xl py-2">
           This launch is scheduled for {date.toDateString()} at {date.toTimeString()}
         </p>
       </Container>
